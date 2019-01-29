@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init();">
+    <div id="container">
+        <div id="main-container">
+            <div id="btn-container">
+                <button class="buttons">Clear</button>
+                <button class="buttons">Color Mode</button>
+                <button class="buttons">Colorblind Mode</button>
+            </div>
+
+            <div id="sketch-container">
+                <div id="sketch"></div>
+            </div>
+        </div>
+
+        <div id="clear-popup">
+           <div id="popup-title-container">
+               <h3>New Sketch</h3>
+            </div>
+           <div id="popup-range-container">
+                <input type="range" min="0" max="100" step="5" id="popup-range" onchange="updateRangePopup(this.value);">
+                <div id="range-counter-container">
+                    <span id="row">row :</span>
+                    <span id="range-counter">0</span>
+                </div>
+                <button id="submit-btn" class="buttons" onclick="getRangeValue();">Go!</button>
+           </div>
+        </div>
+    </div>
+    
+    <script src="script/sketch.js" type="text/javascript"></script>
+    <script src="script/main.js" type="text/javascript"></script>
+</body>
+
+</html>
